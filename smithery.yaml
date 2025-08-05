@@ -1,0 +1,30 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        VARLET_VERSION: config.varletVersion,
+        CACHE_TTL: String(config.cacheTtl)
+      }
+    })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      varletVersion:
+        type: string
+        default: latest
+        description: Varlet UI version to use.
+      cacheTtl:
+        type: number
+        default: 3600000
+        description: Cache TTL in milliseconds.
+  exampleConfig:
+    varletVersion: latest
+    cacheTtl: 3600000
