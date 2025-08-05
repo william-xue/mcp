@@ -8,6 +8,7 @@
   [![npm version](https://badge.fury.io/js/@varlet%2Fmcp.svg)](https://badge.fury.io/js/@varlet%2Fmcp)
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+  [![smithery badge](https://smithery.ai/badge/@varlet/mcp)](https://smithery.ai/server/@varlet/mcp)
 </div>
 
 ## 📖 Guides
@@ -28,6 +29,14 @@
 - 🛠️ **Developer Experience**: Rich tools and debugging features.
 
 ## 📦 Installation
+
+### Installing via Smithery
+
+To install mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@varlet/mcp):
+
+```bash
+npx -y @smithery/cli install @varlet/mcp --client claude
+```
 
 ### Prerequisites
 
